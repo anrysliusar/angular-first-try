@@ -1,0 +1,4 @@
+<h3>Chosen Post</h3>
+<app-post *ngIf="chosenPost" [post]="chosenPost"></app-post>
+<h3>All Posts</h3>
+<app-post *ngFor="let post of posts" [post]="post" (bubblePostUp)="getBubblePost($event)"></app-post>
