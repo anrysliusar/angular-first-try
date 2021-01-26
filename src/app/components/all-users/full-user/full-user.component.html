@@ -1,0 +1,23 @@
+<div *ngFor="let fullUser of users">
+  <div *ngIf="fullUser.id == chosenUserId">
+    <hr>
+    <h3>Chosen user info</h3>
+    <h4>{{fullUser.name}}</h4>
+    <div>
+      {{fullUser.age}} year old,
+      <div>
+        <span *ngIf="fullUser.status">Married</span>
+        <span *ngIf="!fullUser.status">Unmarried</span>
+      </div>
+    </div>
+    <h5>Address:</h5>
+    <div>city: {{fullUser.address.city}}</div>
+    <div>street: {{fullUser.address.street}}</div>
+    <div>house №: {{fullUser.address.number}}</div>
+    <app-car [userId]="chosenUserId"></app-car>
+    <br>
+    <hr>
+  </div>
+
+</div>
+
