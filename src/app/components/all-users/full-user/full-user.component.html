@@ -1,0 +1,11 @@
+<div>
+  <hr>
+  <h4>{{chosenUser.name}}</h4>
+  <div>{{chosenUser.username}}</div>
+  <div>{{chosenUser.email}}</div>
+  <h5>Address</h5>
+  <div>City: {{chosenUser.address.city}}</div>
+  <div>Street: {{chosenUser.address.street}}</div>
+  <button (click)="getPostsOfUser()">Show user`s posts</button>
+</div>
+<router-outlet></router-outlet>
