@@ -16,7 +16,6 @@ export class PostsComponent implements OnInit {
     this.activatedRoute.params.subscribe(() => {
       this.userId = this.router.getCurrentNavigation().extras.state.id as number;
     });
-    console.log(this.userId);
   }
 
   ngOnInit(): void {
