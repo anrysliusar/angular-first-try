@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Task 3';
+  title = 'Task 4';
 
+  constructor(private router: Router) {
+  }
+
+  goHome(): void {
+    this.router.navigate(['home']);
+  }
 }
