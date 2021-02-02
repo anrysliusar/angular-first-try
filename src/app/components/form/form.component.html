@@ -1,0 +1,42 @@
+<form #ngForm='ngForm' (ngSubmit)="contactFormSubmit(ngForm)">
+  <label>Name:</label>
+  <div>
+    <input [(ngModel)]="name" [name]="'name'">
+  </div>
+  <label>Surname</label>
+  <div>
+    <input [(ngModel)]="surname" [name]="'surname'">
+  </div>
+  <label>Age:</label>
+  <div>
+    <input [(ngModel)]="age" [name]="'age'">
+  </div>
+  <label>Email</label>
+  <div>
+    <input [(ngModel)]="email" [name]="'email'">
+  </div>
+  <button>Add Contact</button>
+</form>
+
+
+<!--<form [formGroup]="contactForm" (ngSubmit)="contactFormSubmit()">-->
+<!--  <label>Name:</label>-->
+<!--  <div>-->
+<!--    <input  [formControl]="name">-->
+<!--  </div>-->
+<!--  <label>Surname</label>-->
+<!--  <div>-->
+<!--    <input [formControl]="surname">-->
+<!--  </div>-->
+<!--  <label>Age:</label>-->
+<!--  <div>-->
+<!--    <input [formControl]="age">-->
+<!--  </div>-->
+<!--  <label>Email</label>-->
+<!--  <div>-->
+<!--    <input [formControl]="email">-->
+<!--  </div>-->
+<!--  <button>Add Contact</button>-->
+<!--</form>-->
+
+<app-user *ngFor="let user of users" [user]="user"></app-user>
